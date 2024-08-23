@@ -1,0 +1,9 @@
+Nayan Gajare_JH  to  Everyone 4:40 PM
+https://docs.oracle.com/javase/tutorial/getStarted/intro/cando.html
+
+Malkeet Singh  to  Everyone 4:41 PM
+https://docs.oracle.com/javase/tutorial/getStarted/intro/cando.html
+https://en.cppreference.com/w/
+https://www2.nsru.ac.th/tung/java_doc/Core%20Java%20Volume%20I-%20Fundamentals%209th%20Edition-%20Horstmann,%20Cay%20S.%20&%20Cornell,%20Gary_2013.pdf
+https://medium.com/@AlexanderObregon/java-virtual-machine-jvm-deep-dive-into-its-architecture-and-performance-9f8f209b30e7
+https://www.artima.com/insidejvm/ed2/jvm.html
