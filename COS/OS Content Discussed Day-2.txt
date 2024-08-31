@@ -1,0 +1,18 @@
+OS Content Discussed Day-2
+---------------------------------------------------------------------
+- Linux commands revision
+- implementation of chown, adduser, Head, Tail, Cat commands
+- Redirection variable (>)
+- Process and Process Management
+1. What is process; 
+2. preemptive and non-preemptive processes
+3. Process management; 
+4. Process life cycle
+5. What are schedulers – Short term, Medium term and Long term.
+6. Process scheduling algorithms – FCFS, Shortest Job First, Priority, RR, Queue. 
+7. Examples associated with scheduling algorithms to find turnaround time to find the better performing scheduler.
+- Memory Management
+1. Continuous and Dynamic allocation
+2. First Fit, Best Fit, worst Fit
+3. Internal and external fragmentation
+4. Compaction
