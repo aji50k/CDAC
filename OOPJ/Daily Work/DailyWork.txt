@@ -1,0 +1,28 @@
+Day1-
+TO-Do in lab sessions
+1. Read history of java.
+2. Conceptual diagram of java.
+3. Java Version History.
+4. Software Development Kit (SDK).
+5. Java Development Kit (JDK).
+6. Java Runtime Environment (JRE).
+7. Hello World program.
+8. Overview of JVM Architecture.
+9. Assignment No.1
+
+Day2-
+ToDo in lab sessions 
+1. Java Modifiers.
+2. Java Buzzword.
+3. Components of java
+4. Meaning of main method.
+5. Java Modifiers.
+6. Access Modifiers.
+7. Java Virtual Thread.
+8. Entry point method.
+9. Meaning of System in and System out.
+10. Size of data types.
+11. Loader in java.
+12. Garbage collector.
+13. ⁠Assignments
+
