@@ -26,3 +26,33 @@ ToDo in lab sessions
 12. Garbage collector.
 13. ⁠Assignments
 
+day3-
+TODO in Lab Sessions :
+1. Components of JVM.
+2. Java Buzzwords.
+3. Java Modifiers.
+4. Java Virtual Machine Threads.
+5. Entry Point Method.
+6. Difference between print, println and printf.
+7. Data Types.
+8. Types of comments in java.
+9. Classification of data types.
+10. Primitive data types.
+11. Wrapper Class Hierarchy.
+12. Overview of String.
+13. Memory representation of string.
+14. Type Casting.
+15. Widening Conversion.
+16. Narrowing Conversion.
+17. Boxing Conversion.
+18. Unboxing Conversion.
+19. Parameters vs arguments.
+20. Command Line Arguments. 
+21. All assignments.+ Day 2 zip Assignment
+
+Research topics:
+1. Memory leakage in java.
+2. How to find out the size of an object in java?
+3. Why java is secure?
+4. How java is distributed?
+
