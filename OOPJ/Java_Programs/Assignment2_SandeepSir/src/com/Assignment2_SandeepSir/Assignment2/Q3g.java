@@ -1,11 +1,10 @@
 package com.Assignment2_SandeepSir.Assignment2;
 
-public class Q2g {
+public class Q3g {
 
 	public static void main(String[] args) {
-		byte number = 3;
-		Byte b = Byte.valueOf(number);
-		System.out.println(b);
+		short number = 8;
+		System.out.println(Short.valueOf(number));
 	}
 
 }

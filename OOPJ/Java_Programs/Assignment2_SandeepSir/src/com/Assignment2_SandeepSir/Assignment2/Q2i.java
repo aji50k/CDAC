@@ -1,11 +1,11 @@
 package com.Assignment2_SandeepSir.Assignment2;
 
-public class Q2g {
+public class Q2i {
 
 	public static void main(String[] args) {
-		byte number = 3;
-		Byte b = Byte.valueOf(number);
-		System.out.println(b);
+		byte num = 2;
+		String s = Byte.toString(num);
+		System.out.println(s);
 	}
 
 }

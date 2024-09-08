@@ -1,9 +1,17 @@
 package com.lab_session;
 
-public class EmployeeInfo {
+class Employee {
+	String name;
+	int empId;
+	float salary;
+	
 	
 }
 
 public class EmployeeInfo {
-	
+	public static void main(String[] args) {
+		
+		
+	}
 }
+
