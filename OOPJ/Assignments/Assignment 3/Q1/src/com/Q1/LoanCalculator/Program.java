@@ -16,7 +16,6 @@ class LoanAmortizationCalculator {
         float monthlyInterestRate = annualInterestRate / 12 / 100;
         int numberOfMonths = loanTerm * 12;
         
-        // Correct formula for monthly payment
         double monthlyPayment = principle * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) /
                                 (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
         
