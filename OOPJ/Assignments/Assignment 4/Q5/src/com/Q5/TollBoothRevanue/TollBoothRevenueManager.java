@@ -15,7 +15,6 @@ public class TollBoothRevenueManager {
         this.motorcycleTollRate = motorcycleTollRate;
     }
 
-    // Getter and Setter methods
     public double getCarTollRate() {
         return carTollRate;
     }
@@ -64,17 +63,16 @@ public class TollBoothRevenueManager {
         this.motorcycleCount = motorcycleCount;
     }
 
-    // Method to calculate total revenue
+    // total revenue
     public double calculateTotalRevenue() {
         return (carCount * carTollRate) + (truckCount * truckTollRate) + (motorcycleCount * motorcycleTollRate);
     }
 
-    // Method to calculate total vehicle count
+    //total vehicle count
     public int calculateTotalVehicleCount() {
         return carCount + truckCount + motorcycleCount;
     }
 
-    // toString method to display details
     @Override
     public String toString() {
         return "Toll Booth Revenue Summary: \n" +
