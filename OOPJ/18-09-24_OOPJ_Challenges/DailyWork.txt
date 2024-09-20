@@ -1,0 +1,58 @@
+Day1-
+TO-Do in lab sessions
+1. Read history of java.
+2. Conceptual diagram of java.
+3. Java Version History.
+4. Software Development Kit (SDK).
+5. Java Development Kit (JDK).
+6. Java Runtime Environment (JRE).
+7. Hello World program.
+8. Overview of JVM Architecture.
+9. Assignment No.1
+
+Day2-
+ToDo in lab sessions 
+1. Java Modifiers.
+2. Java Buzzword.
+3. Components of java
+4. Meaning of main method.
+5. Java Modifiers.
+6. Access Modifiers.
+7. Java Virtual Thread.
+8. Entry point method.
+9. Meaning of System in and System out.
+10. Size of data types.
+11. Loader in java.
+12. Garbage collector.
+13. ⁠Assignments
+
+day3-
+TODO in Lab Sessions :
+1. Components of JVM.
+2. Java Buzzwords.
+3. Java Modifiers.
+4. Java Virtual Machine Threads.
+5. Entry Point Method.
+6. Difference between print, println and printf.
+7. Data Types.
+8. Types of comments in java.
+9. Classification of data types.
+10. Primitive data types.
+11. Wrapper Class Hierarchy.
+12. Overview of String.
+13. Memory representation of string.
+14. Type Casting.
+15. Widening Conversion.
+16. Narrowing Conversion.
+17. Boxing Conversion.
+18. Unboxing Conversion.
+19. Parameters vs arguments.
+20. Command Line Arguments. 
+21. All assignments.+ Day 2 zip Assignment
+
+Research topics:
+1. Memory leakage in java.
+2. How to find out the size of an object in java?
+3. Why java is secure?
+4. How java is distributed?
+
