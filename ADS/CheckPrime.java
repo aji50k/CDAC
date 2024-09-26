@@ -1,4 +1,3 @@
-package com.JavaProgramsAskedInInterview.basics;
 
 class CheckPrime {
 
