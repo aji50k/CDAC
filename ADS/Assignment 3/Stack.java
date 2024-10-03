@@ -1,4 +1,4 @@
-class StackUsigArray{
+class Stack{
 	static final int max = 1000;
 	int top;
 	int a[] = new int[max];
@@ -7,7 +7,7 @@ class StackUsigArray{
 		return (top<0);
 	}
 	
-	StackUsigArray(){
+	Stack(){
 		top = -1;
 	}
 	
@@ -26,6 +26,7 @@ class StackUsigArray{
 	int pop(){
 		if(top<0){
 			System.out.println("Stack Underflow");
+			return 0;
 		}
 		else{
 			int x = a[top--];
@@ -51,12 +52,13 @@ class StackUsigArray{
 	}
 	
 	public static void main(String args[]){
-		StackUsigArray st = StackUsigArray();
+		Stack st = new Stack();
 		st.push(5);
 		st.push(3);
 		st.push(7);
 		System.out.println(st.pop()+" Popped from the stack");
 		System.out.println("Top element is :"+st.peek());
 		System.out.println("Elements present in stack : ");
+		st.print();
 	}
 }
