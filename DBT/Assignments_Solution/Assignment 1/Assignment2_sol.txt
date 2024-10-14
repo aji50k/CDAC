@@ -1,0 +1,16 @@
+DBT Assignment - 2
+
+1. Which field of the Customers table is the primary key?
+The primary key of the CUSTOMERS table is the Cnum field, as it uniquely identifies each customer.
+
+2. What is the 4th column of the Customers table?
+The 4th column of the CUSTOMERS table is Rating, which stores an integer value representing the customer’s rating.
+
+3. What is another word for row? For column?
+Another word for row is record or tuple.
+Another word for column is field or attribute.
+
+4. Why isn’t it possible to see the first five rows of a table?
+This could refer to the fact that, in some databases, data isn’t inherently ordered unless specified by an ORDER BY clause. 
+Therefore, without explicitly querying the data in an ordered fashion, the "first five rows" may not have a meaningful or predictable order. 
+Additionally, limitations of the query environment or user privileges could also prevent viewing certain rows.
