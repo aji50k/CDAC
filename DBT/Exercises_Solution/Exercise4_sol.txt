@@ -1,0 +1,71 @@
+SQL Exercise 4
+1. Display the minimum Status in the Supplier table.
+SELECT MIN(Status) AS MinimumStatus FROM S;
+
+
+2. Display the maximum Weight in the Parts table.
+SELECT MAX(Weight) AS MaximumWeight FROM P;
+
+
+3. Display the average Weight of the Parts.
+SELECT AVG(Weight) AS AverageWeight FROM P;
+
+4. Display the total Quantity sold for part ‘P1’.
+SELECT SUM(Qty) AS TotalQuantitySold FROM SPJ WHERE P# = 'P1';
+
+
+5. Display the total Quantity sold for each part.
+SELECT P#, SUM(Qty) AS TotalQuantitySold 
+FROM SPJ 
+GROUP BY P#;
+
+
+6. Display the average Quantity sold for each part.
+SELECT P#, AVG(Qty) AS AverageQuantitySold 
+FROM SPJ 
+GROUP BY P#;
+
+
+7. Display the maximum Quantity sold for each part, provided the maximum Quantity
+is greater than 800.
+SELECT P#, MAX(Qty) AS MaximumQuantitySold 
+FROM SPJ 
+GROUP BY P# 
+HAVING MAX(Qty) > 800;
+
+
+8. Display the Status and the count of Suppliers with that Status.
+SELECT Status, COUNT(*) AS SupplierCount 
+FROM S 
+GROUP BY Status;
+
+
+9. Display the count of Projects going on in different cities.
+SELECT City, COUNT(*) AS ProjectCount 
+FROM J 
+GROUP BY City;
+
+
+10. What is the difference between COUNT(Status) and COUNT(*) ?
+COUNT(Status) counts only the non-NULL values in the Status column. If there are any rows where Status is NULL, they will not be included in the count.
+COUNT(*) counts all rows in the table, regardless of whether any column contains NULL values. It returns the total number of rows in the table.
+
+
+11. Display the Status and the Count of Suppliers with that Status in the following format
+as shown below:-
+
+Status Count
+Ten 1
+Twenty 2
+Thirty 3 
+
+SELECT 
+    CASE 
+        WHEN Status = 10 THEN 'Ten'
+        WHEN Status = 20 THEN 'Twenty'
+        WHEN Status = 30 THEN 'Thirty'
+    END AS Status, 
+    COUNT(*) AS Count
+FROM S
+GROUP BY Status
+ORDER BY Status;
