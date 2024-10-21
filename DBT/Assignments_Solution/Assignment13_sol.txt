@@ -1,0 +1,61 @@
+Assignment – 13
+Using the UNION clause.
+
+
+1) Create a union of two queries that shows the names, cities, and ratings of all
+customers. Those with rating of 200 or greater will also have the words “High
+Rating”, while the others will have the words “Low Rating”.
+SELECT Cname, City, Rating, 'High Rating' AS RatingCategory
+FROM CUSTOMERS
+WHERE Rating >= 200
+
+UNION
+
+SELECT Cname, City, Rating, 'Low Rating' AS RatingCategory
+FROM CUSTOMERS
+WHERE Rating < 200;
+
+
+
+2) Write a command that produces the name and number of each salesperson and
+each customer with more than one current order. Put the results in alphabetical
+order.
+SELECT S.Sname AS Name, S.Snum AS Number
+FROM SALESPEOPLE S
+JOIN ORDERS O ON S.Snum = O.Snum
+GROUP BY S.Sname, S.Snum
+HAVING COUNT(O.Onum) > 1
+
+UNION
+
+SELECT C.Cname AS Name, C.Cnum AS Number
+FROM CUSTOMERS C
+JOIN ORDERS O ON C.Cnum = O.Cnum
+GROUP BY C.Cname, C.Cnum
+HAVING COUNT(O.Onum) > 1
+
+ORDER BY Name;
+
+
+
+3) Form a union of three queries. Have the first select the snums of all salespeople in
+San Jose; the second, the cnums of all customers in San Jose; and the third the
+onums of all orders on October 3. Retain duplicates between the last two queries
+but eliminate any redundancies between either of them and the first.
+(Note: in the sample tables as given, there would be no such redundancy. This is
+besides the point.)
+SELECT S.Snum
+FROM SALESPEOPLE S
+WHERE S.City = 'San Jose'
+
+UNION
+
+SELECT C.Cnum
+FROM CUSTOMERS C
+WHERE C.City = 'San Jose'
+
+UNION ALL
+
+SELECT O.Onum
+FROM ORDERS O
+WHERE O.Odate = '1990-10-03';
