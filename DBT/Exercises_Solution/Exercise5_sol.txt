@@ -1,0 +1,74 @@
+SQL Exercise 5
+1. Display the Supplier name and the Quantity sold.
+SELECT S.Sname AS SupplierName, SUM(SPJ.Qty) AS QuantitySold
+FROM S
+JOIN SPJ ON S.S# = SPJ.S#
+GROUP BY S.Sname;
+
+2. Display the Part name and Quantity sold.
+SELECT P.Pname AS PartName, SUM(SPJ.Qty) AS QuantitySold
+FROM P
+JOIN SPJ ON P.P# = SPJ.P#
+GROUP BY P.Pname;
+
+3. Display the Project name and Quantity sold.
+SELECT J.Jname AS ProjectName, SUM(SPJ.Qty) AS QuantitySold
+FROM J
+JOIN SPJ ON J.J# = SPJ.J#
+GROUP BY J.Jname;
+
+4. Display the Supplier name, Part name, Project name and Quantity sold.
+SELECT S.Sname AS SupplierName, P.Pname AS PartName, J.Jname AS ProjectName, SUM(SPJ.Qty) AS QuantitySold
+FROM S
+JOIN SPJ ON S.S# = SPJ.S#
+JOIN P ON P.P# = SPJ.P#
+JOIN J ON J.J# = SPJ.J#
+GROUP BY S.Sname, P.Pname, J.Jname;
+
+5. Display the Supplier name, Supplying Parts to a Project in the same City.
+SELECT DISTINCT S.Sname AS SupplierName
+FROM S
+JOIN SPJ ON S.S# = SPJ.S#
+JOIN P ON P.P# = SPJ.P#
+JOIN J ON J.J# = SPJ.J#
+WHERE S.City = J.City;
+
+6. Display the Part name that is ‘Red’ is color, and the Quantity sold.
+SELECT P.Pname AS PartName, SUM(SPJ.Qty) AS QuantitySold
+FROM P
+JOIN SPJ ON P.P# = SPJ.P#
+WHERE P.Color = 'Red'
+GROUP BY P.Pname;
+
+7. Display all the Quantity sold by Suppliers with the Status = 20.
+SELECT S.Sname AS SupplierName, SUM(SPJ.Qty) AS QuantitySold
+FROM S
+JOIN SPJ ON S.S# = SPJ.S#
+WHERE S.Status = 20
+GROUP BY S.Sname;
+
+8. Display all the Parts and Quantity with a Weight > 14.
+SELECT P.Pname AS PartName, SUM(SPJ.Qty) AS QuantitySold
+FROM P
+JOIN SPJ ON P.P# = SPJ.P#
+WHERE P.Weight > 14
+GROUP BY P.Pname;
+
+9. Display all the Project names and City, which has bought more than 500 Parts.
+SELECT J.Jname AS ProjectName, J.City
+FROM J
+JOIN SPJ ON J.J# = SPJ.J#
+GROUP BY J.Jname, J.City
+HAVING SUM(SPJ.Qty) > 500;
+
+10. Display all the Part names and Quantity sold that have a Weight less than 15.
+SELECT P.Pname AS PartName, SUM(SPJ.Qty) AS QuantitySold
+FROM P
+JOIN SPJ ON P.P# = SPJ.P#
+WHERE P.Weight < 15
+GROUP BY P.Pname;
+
+11. Display all the Employee names and the name of their Managers.
+SELECT E.EmpName AS EmployeeName, M.EmpName AS ManagerName
+FROM EMP E
+JOIN EMP M ON E.ManagerID = M.EmpID;

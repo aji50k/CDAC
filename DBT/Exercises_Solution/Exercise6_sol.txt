@@ -1,0 +1,55 @@
+SQL Exercise 6
+1. Display all the Suppliers with the same Status as the supplier, ‘CLARK’.
+SELECT S.*
+FROM S
+WHERE S.Status = (SELECT S.Status FROM S WHERE S.Sname = 'CLARK');
+
+2. Display all the Employees in the same department as the employee ‘MILLER’.
+SELECT E.*
+FROM EMP E
+WHERE E.DeptNo = (SELECT E.DeptNo FROM EMP WHERE E.EmpName = 'MILLER');
+
+3. Display all the Parts which have more Weight than all the Red parts.
+SELECT P.*
+FROM P
+WHERE P.Weight > ALL (SELECT P.Weight FROM P WHERE P.Color = 'Red');
+
+4. Display all the Projects going on in the same city as the project ‘TAPE’.
+SELECT J.*
+FROM J
+WHERE J.City = (SELECT J.City FROM J WHERE J.Jname = 'TAPE');
+
+5. Display all the Parts with Weight less than all the Green parts.
+SELECT P.*
+FROM P
+WHERE P.Weight < ALL (SELECT P.Weight FROM P WHERE P.Color = 'Green');
+
+6. Display the name of the Supplier who has sold the maximum Quantity (in one
+sale).
+SELECT S.Sname
+FROM S
+JOIN SPJ ON S.S# = SPJ.S#
+WHERE SPJ.Qty = (SELECT MAX(SPJ.Qty) FROM SPJ);
+
+7. Display the name of the Employee with the minimum Salary.
+SELECT E.EmpName
+FROM EMP E
+WHERE E.Salary = (SELECT MIN(E2.Salary) FROM EMP E2);
+
+8. Display the name of the Supplier who has sold the maximum overall Quantity (sum
+of Sales).
+SELECT S.Sname
+FROM S
+JOIN SPJ ON S.S# = SPJ.S#
+GROUP BY S.Sname
+ORDER BY SUM(SPJ.Qty) DESC
+LIMIT 1;
+
+9. Display the name of the Department with the maximum number of Employees.
+SELECT D.DeptName
+FROM D
+JOIN EMP E ON D.DeptNo = E.DeptNo
+GROUP BY D.DeptName
+ORDER BY COUNT(E.EmpID) DESC
+LIMIT 1;
+ 
