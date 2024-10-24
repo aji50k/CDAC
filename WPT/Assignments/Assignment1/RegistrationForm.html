@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+
+
 </head>
 <body>
     <h1>Registration Form</h1>
@@ -12,13 +14,109 @@
     </p>
     <hr>
 
-    <div>
+    <div id="row-container">
         <h2>PERSONAL INFORMATION</h2>
         <form action="resume.html" method="get">
-            <label for="name">Full name: </label>
-            <input type="text" name="name" id="name" placeholder="Enter your name" required>
-            <label for="nickname">NickName: </label>
+            <div>
+                <div>
+                    <label for="name">Full name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+    
+                </div>
+                <div>
+                    <label for="Nickname">Nickname: </label>
+                    <input type="text" name="nickname" id="nickname">
+                </div>
+                <div>
+                    <label for="pob">Place of Birth: </label>
+                    <input type="text" name="pob" id="pob">
+                </div>
+                <div>
+                    <label for="dob">Date of Birth: </label>
+                    <input type="date" name="dob" id="dob">
+                </div>
+                <div>
+                    <label for="nat">Nationality: </label>
+                    <input type="text" name="nat" id="nat">
+                </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    <label for="ms">Marrital Status: </label>
+                    <select>
+                        <option value="select">select</option>
+                        <option value="mr">married</option>
+                        <option value="ur">unmarried</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="hobbies">Hobbies: </label>
+                    <input type="checkbox" name="dancing" id="dancing">dancing
+                    <input type="checkbox" name="singing" id="singing">Singing
+                    <input type="checkbox" name="drawing" id="drawing">Drawing
+                </div>
+                <div>
+                    <label for="more">Tell more about yourself</label>
+                    <textarea name="more" id="more"></textarea>
+                </div>
+            </div>
+
+            <div>
+                <h2>QUALIFICATION</h2>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of Passing</th>
+                        </tr>
+                        <tr>
+                            <td>SSC</td>
+                            <td><input type="text" name="board" id="board"></td>
+                            <td><input type="number" name="percentage" id="percentage"></td>
+                            <td><input type="number" name="year" id="year"></td>
+                        </tr>
+                        <tr>
+                            <td>HSC</td>
+                            <td><input type="text" name="board" id="board"></td>
+                            <td><input type="number" name="percentage" id="percentage"></td>
+                            <td><input type="number" name="year" id="year"></td>
+                        </tr>
+                        <tr>
+                            <td>Graduation</td>
+                            <td><input type="text" name="board" id="board"></td>
+                            <td><input type="number" name="percentage" id="percentage"></td>
+                            <td><input type="number" name="year" id="year"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <h2>ADDRESS</h2>
+                <div>
+                    <label for="pa">Permanent Address: </label>
+                    <input type="text" name="pa" id="pa">
+                </div>
+                <div>
+                    <label for="city">City: </label>
+                    <input type="text" name="city" id="city">
+                </div>
+                <div>
+                    <label for="state">State: </label>
+                    <input type="text" name="state" id="state">
+                </div>
+                <div>
+                    <label for="zip">Zip Code: </label>
+                    <input type="number" name="zip" id="zip">
+                </div>
+            </div>
         </form>
     </div>
+
+    
 </body>
 </html>
