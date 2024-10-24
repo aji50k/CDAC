@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amruta Sawant's Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Adjusting alignment for top view */
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px; /* Restricting width to fit smaller screens */
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px; /* Adding margin for breathing space on smaller screens */
+            text-align: left;
+            box-sizing: border-box; /* Ensures padding doesn't increase width */
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            margin-bottom: 5px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #333;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f9;
+        }
+        td {
+            vertical-align: top;
+        }
+        img {
+            border-radius: 50%;
+        }
+        .profile-info {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap; /* Ensures proper wrapping on small screens */
+        }
+        .profile-info img {
+            margin-right: 20px;
+            width: 100px; /* Adjust image size */
+        }
+        .profile-info h1, .profile-info p {
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .profile-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .profile-info img {
+                margin-bottom: 10px;
+            }
+            table, th, td {
+                font-size: 14px; /* Make text smaller for narrow screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-info">
+            <img src="https://avatars.githubusercontent.com/u/72157658?s=96&v=4" alt="Amruta Sawant Photo">
+            <div>
+                <h1>Amruta Sawant</h1>
+                <p><i>PG-DAC || CDAC Mumbai</i></p>
+                <p>I ❤️ web development 🚀</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Institute</th>
+                <th>Year</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>B.Tech CSE</td>
+                <td>KBPCOES</td>
+                <td>2023</td>
+                <td>8.17 CGPA</td>
+            </tr>
+            <tr>
+                <td>12<sup>th</sup> Grade</td>
+                <td>SGM College Karad</td>
+                <td>2019</td>
+                <td>65.08%</td>
+            </tr>
+            <tr>
+                <td>10<sup>th</sup> Grade</td>
+                <td>Atmaram Vidya Mandir, Ogalewadi, Karad</td>
+                <td>2017</td>
+                <td>89.20%</td>
+            </tr>
+        </table>
+
+        <h2>Internships</h2>
+        <p><strong>Do It Infosystems, Satara</strong></p>
+        <p><i>Software Developer Intern</i></p>
+        <ul>
+            <li>Developed and maintained front-end functionalities using HTML, CSS, and JavaScript, ensuring responsive design and user-friendly interface.</li>
+            <li>Implemented back-end services and APIs using Java, JDBC, and Spring Boot, contributing to the overall architecture of the application.</li>
+            <li>Assisted in troubleshooting and debugging issues to improve system reliability.</li>
+        </ul>
+        
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <h3>IoT Based Smart Digital Notice Board Using Raspberry Pi 3 B+</h3>
+                <ul>
+                    <li>Developed an innovative IoT-based smart digital notice board using Raspberry Pi 3 B+ microcontroller board.</li>
+                    <li>Displayed notices of any format (text, image) on an LCD monitor, managed by a dedicated web application for remote notices.</li>
+                </ul>
+                <h4><i>Tools/Technologies used: Raspberry Pi 3 B+, HTML, CSS, JavaScript, PHP, MySQL, Apache web server.</i></h4>
+            </li>
+            <li>
+                <h3>Employee Management System</h3>
+                <ul>
+                    <li>Developed a robust Employee Management System using Java, Swing, AWT, and MySQL, enabling centralized storage and efficient management of employee information.</li>
+                    <li>Implemented CRUD operations for seamless data handling, streamlining HR processes and enhancing organizational efficiency.</li>
+                </ul>
+                <h4><i>Tools/Technologies used: Java, Swing, AWT, MySQL, JDBC, Eclipse IDE.</i></h4>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>Connect With Me</h2>
+        <div class="contact-info">
+            <p>Email: amrutaj67@gmail.com</p>
+            <p>Github: <a href="https://github.com/aji50k">github.com/aji50k</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
