@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Highlight Bold Words</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
-    
+    <p>
+        <a href="#" id="hoverLink">On mouse over here bold words of the following paragraph will be highlighted</a>
+    </p>
+    <p>
+        We have just started this section for the users <strong>(beginner to intermediate)</strong> who want to work with <strong>various<strong> <strong>JavaScript</strong> problems and write scripts online to test their <strong>JavaScript</strong> skill.
+    </p>
+
+    <script>
+       
+        const link = document.getElementById('hoverLink');
+        const boldElements = document.querySelectorAll('strong');
+
+        function addHighlight() {
+            boldElements.forEach(element => {
+                element.classList.add('highlight');
+            });
+        }
+
+        function removeHighlight() {
+            boldElements.forEach(element => {
+                element.classList.remove('highlight');
+            });
+        }
+
+        link.addEventListener('mouseover', addHighlight);
+        link.addEventListener('mouseout', removeHighlight);
+    </script>
 </body>
 </html>
