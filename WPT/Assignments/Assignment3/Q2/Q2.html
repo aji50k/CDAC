@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+</head>
+<body>
+
+    <h1>Personal Information Form</h1>
+    <form id="infoForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName"><br><br>
+
+        <label for="contactNo">Contact No:</label>
+        <input type="text" id="contactNo" name="contactNo"><br><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <button type="button" onclick="displayFormValues()">Submit</button>
+    </form>
+
+    <h2>Form Values:</h2>
+    <div id="output"></div>
+
+    <script>
+        function displayFormValues() {
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const contactNo = document.getElementById("contactNo").value;
+            const email = document.getElementById("email").value;
+
+            const output = `
+                <p><strong>First Name:</strong> ${firstName}</p>
+                <p><strong>Last Name:</strong> ${lastName}</p>
+                <p><strong>Contact No:</strong> ${contactNo}</p>
+                <p><strong>Email ID:</strong> ${email}</p>
+            `;
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
