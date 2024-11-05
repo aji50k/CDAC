@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Scheduler</title>
+  <link rel="icon" type="image/x-icon" href="/images/fav.png">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Tutoring Platform</a>
+  </nav>
+
+
+  <section class="container mt-4">
+    <h2 class="text-center">Book a Tutoring Session</h2>
+    <form id="sessionForm">
+      <div class="form-group">
+        <label for="name">Student Name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="mentor">Choose Mentor</label>
+        <select class="form-control" id="mentor">
+          <option>Mentor 1</option>
+          <option>Mentor 2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" id="date" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Book Session</button>
+    </form>
+  </section>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
