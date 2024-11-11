@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="/images/fav.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Contact Us</h2>
+        <div id="error_message"></div>
+        
+        <form action="" id="myform" onsubmit="return validate();">
+            <div class="input_field">
+                <input type="text" placeholder="Name" id="name" required>
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Subject" id="subject" required>
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Phone" id="phone" required>
+            </div>
+            <div class="input_field">
+                <input type="email" placeholder="Email" id="email" required>
+            </div>
+            <div class="input_field">
+                <textarea placeholder="Message" id="message" required></textarea>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validate() {
+            const name = document.getElementById("name").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const error_message = document.getElementById("error_message");
+            
+            error_message.style.padding = "10px";
+            error_message.style.color = "red";
+            error_message.innerHTML = "";
+
+            if (!name || !subject || !phone || !email || !message) {
+                error_message.innerHTML = "All fields are required.";
+                return false;
+            }
+
+            if (name.length < 3) {
+                error_message.innerHTML = "Please enter a valid name with at least 3 characters.";
+                return false;
+            }
+
+            if (subject.length < 3) {
+                error_message.innerHTML = "Please enter a valid subject with at least 3 characters.";
+                return false;
+            }
+
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone)) {
+                error_message.innerHTML = "Please enter a valid 10-digit phone number.";
+                return false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                error_message.innerHTML = "Please enter a valid email address.";
+                return false;
+            }
+
+            if (message.length < 10) {
+                error_message.innerHTML = "Please enter a message with at least 10 characters.";
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>

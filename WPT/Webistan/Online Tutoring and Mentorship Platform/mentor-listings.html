@@ -13,6 +13,34 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    fetch('/api/mentors')
+      .then(response => response.json())
+      .then(data => {
+        const mentorList = document.querySelector('.row');
+        mentorList.innerHTML = '';
+        data.forEach(mentor => {
+          mentorList.innerHTML += `
+            <div class="col-md-4">
+              <div class="card">
+                <img src="${mentor.image_url}" class="card-img-top" alt="${mentor.name}">
+                <div class="card-body">
+                  <h5 class="card-title">${mentor.name}</h5>
+                  <p class="card-text">${mentor.subject}, ${mentor.experience} years experience.</p>
+                  <a href="profile.html?id=${mentor.id}" class="btn btn-secondary">View Profile</a>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      })
+      .catch(error => console.error('Error fetching mentors:', error));
+  });
+  </script>
+  
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -27,10 +55,10 @@
 
       <div class="col-md-4">
         <div class="card">
-          <img src="images/mentor2.jpg" class="card-img-top" alt="Mentor 2">
+          <img src="images/mentor1.jpg" class="card-img-top" alt="Mentor 2">
           <div class="card-body">
-            <h5 class="card-title">Mentor Name 2</h5>
-            <p class="card-text">Specializes in Physics, 3 years experience.</p>
+            <h5 class="card-title">Devi Prasad</h5>
+            <p class="card-text">Specializes in Physics, 11 years experience.</p>
             <a href="#" class="btn btn-secondary">Contact Mentor</a>
           </div>
         </div>
@@ -40,8 +68,8 @@
         <div class="card">
           <img src="images/mentor2.jpg" class="card-img-top" alt="Mentor 2">
           <div class="card-body">
-            <h5 class="card-title">Mentor Name 2</h5>
-            <p class="card-text">Specializes in Physics, 3 years experience.</p>
+            <h5 class="card-title">Ram Prasad</h5>
+            <p class="card-text">Specializes in Biology, 13 years experience.</p>
             <a href="#" class="btn btn-secondary">Contact Mentor</a>
           </div>
         </div>
@@ -49,10 +77,10 @@
 
       <div class="col-md-4">
         <div class="card">
-          <img src="images/mentor2.jpg" class="card-img-top" alt="Mentor 2">
+          <img src="images/female.jpg" class="card-img-top" alt="Mentor 2">
           <div class="card-body">
-            <h5 class="card-title">Mentor Name 2</h5>
-            <p class="card-text">Specializes in Physics, 3 years experience.</p>
+            <h5 class="card-title">Sarika Devi</h5>
+            <p class="card-text">Specializes in Chemistry, 12 years experience.</p>
             <a href="#" class="btn btn-secondary">Contact Mentor</a>
           </div>
         </div>

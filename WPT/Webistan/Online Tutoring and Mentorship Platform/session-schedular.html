@@ -11,6 +11,34 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script>
+  document.getElementById('sessionForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const subject = document.getElementById('subject').value;
+    const experience = parseInt(document.getElementById('experience').value);
+    const email = document.getElementById('email').value;
+    const bio = document.getElementById('bio').value;
+    const image_url = document.getElementById('image_url').value;
+  
+    fetch('/api/mentors', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, subject, experience, email, bio, image_url })
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert(data.message);
+      window.location.reload();
+    })
+    .catch(error => console.error('Error adding mentor:', error));
+  });
+  </script>
+  
+
+
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>

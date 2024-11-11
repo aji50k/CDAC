@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(#edd7f1,#b3b6e1);
   }
   
   .jumbotron {
-    background-color: #f8f9fa;
+    background: linear-gradient(#e6c4ed,#d4c7f0);
     padding: 2rem;
   }
   
@@ -15,4 +16,6 @@ body {
     margin-bottom: 1.5rem;
   }
 
-  
+  .navbar {
+    background: linear-gradient(#E4B1F0,#7E60BF);
+  }
